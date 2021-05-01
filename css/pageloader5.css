@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    margin: 0px 2px;
+}
+
+.box span {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+}
+
+.box span:nth-child(1) {
+    animation: owt1;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation-duration: 1.8s;
+    animation-delay: 2s;
+    animation-timing-function: cubic-bezier(0.6, 0.01, 0.4, 1);
+    animation-iteration-count: infinite;
+    background-color: royalblue;
+}
+
+.box span:nth-child(2) {
+    animation: owt2;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation-duration: 1.8s;
+    animation-delay: 2s;
+    animation-timing-function: cubic-bezier(0.6, 0.01, 0.4, 1);
+    animation-iteration-count: infinite;
+    background-color: yellow;
+}
+
+.box span:nth-child(3) {
+    animation: owt3;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation-duration: 1.8s;
+    animation-delay: 2s;
+    animation-timing-function: cubic-bezier(0.6, 0.01, 0.4, 1);
+    animation-iteration-count: infinite;
+    background-color: red;
+}
+
+.box span:nth-child(4) {
+    animation: owt4;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation-duration: 1.8s;
+    animation-delay: 2s;
+    animation-timing-function: cubic-bezier(0.6, 0.01, 0.4, 1);
+    animation-iteration-count: infinite;
+    background-color: blue;
+}
+
+@keyframes owt1 {
+    0%,
+    100% {
+        transform: translate(0, 0)
+    }
+    25% {
+        transform: translate(0, 25px)
+    }
+    50% {
+        transform: translate(25px, 25px)
+    }
+    75% {
+        transform: translate(25px, 0)
+    }
+}
+
+@keyframes owt2 {
+    0%,
+    100% {
+        transform: translate(0, 0)
+    }
+    25% {
+        transform: translate(-25px, 0)
+    }
+    50% {
+        transform: translate(-25px, 25px)
+    }
+    75% {
+        transform: translate(0, 25px)
+    }
+}
+
+@keyframes owt3 {
+    0%,
+    100% {
+        transform: translate(0, 0)
+    }
+    25% {
+        transform: translate(0, -25px)
+    }
+    50% {
+        transform: translate(-25px, -25px)
+    }
+    75% {
+        transform: translate(-25px, 0)
+    }
+}
+
+@keyframes owt4 {
+    0%,
+    100% {
+        transform: translate(0, 0)
+    }
+    25% {
+        transform: translate(25px, 0)
+    }
+    50% {
+        transform: translate(25px, -25px)
+    }
+    75% {
+        transform: translate(0, -25px)
+    }
+}

@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    margin: 0px 2px;
+}
+
+.span1 {
+    position: absolute;
+    animation: owt;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-delay: 25s;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.span2 {
+    position: absolute;
+    animation: owt1;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 2s;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.span3 {
+    position: absolute;
+    animation: owt2;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: inherit;
+    animation-delay: 1s;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    animation-direction: reverse;
+}
+
+@keyframes owt {
+    0% {
+        border: 5px solid gold;
+    }
+    100% {
+        transform: scale(1.5);
+        border: 5px dotted gold;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes owt1 {
+    0% {
+        border: 5px solid red;
+    }
+    100% {
+        transform: scale(1);
+        border: 5px dotted red;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes owt2 {
+    0% {
+        border: 5px solid olive;
+    }
+    100% {
+        transform: scale(0.5);
+        border: 5px dotted olive;
+        transform: rotate(360deg);
+    }
+}

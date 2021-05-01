@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    margin: 0px 2px;
+    background-color: white;
+    ;
+}
+
+.box span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.box span::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    animation: owt;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.box span::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    animation: owt;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.box span:nth-child(1) {
+    position: absolute;
+    animation-delay: 2s;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    left: 0px;
+    top: 0px;
+}
+
+.box span:nth-child(2) {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    animation-delay: 4s;
+}
+
+.box span:nth-child(3) {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    animation-delay: 6s;
+}
+
+@keyframes owt {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
